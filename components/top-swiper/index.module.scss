@@ -1,0 +1,132 @@
+@import "@/styles/variables.scss";
+
+@mixin swiperBtn {
+    position: absolute;
+    top: 208px;
+    width: 37px;
+    height: 63px;
+    background-color: #000;
+    filter: alpha(opacity=10);
+    opacity: 0.1;
+
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    & > span {
+        display: inline-block;
+        width: 37px;
+        height: 63px;
+
+    }
+}
+
+.top-swiper {
+    height: $swiperHeight;
+    position: relative;
+     .content {
+        position: relative;
+    }
+    .carousel {
+        margin: 0 -1000px;
+        .swiper-item {
+            height: $swiperHeight;
+            position: relative;
+            .swiper-bg {
+                position: absolute;
+                z-index: -1;
+                height: 100%;
+                width: 100%;
+
+                background-position: center center;
+                background-size: 10px auto;
+            }
+            .image {
+                margin: 0 1000px;
+            }
+    }
+    }
+
+    .dots {
+        display: flex;
+        position: absolute;
+        bottom:15px;
+        //justify-content: center;
+        left:510px;
+        z-index: 99;
+        .dot {
+            background: #e8e5e5;
+            width: 6px;
+            height: 6px; 
+            border-radius: 50%;  
+            margin-right: 8px;
+
+            &.active{
+                background-color: red;
+            }
+        }
+    }
+
+    .prev {
+        position: absolute;
+        background-color: rgba(60, 62, 62, 0.3);
+        left: 10px;
+        top: 220px;
+        width: 40px;
+        height: 60px;
+        border: none;
+        z-index: 1;
+        cursor: pointer;
+        &:hover {
+            background-color: rgba(60, 62, 62, 0.5);
+        }
+        
+        span {
+            position: absolute;
+            display: block;
+            left: 4px;
+            top: 7px;
+            width: 80%;
+            height: 80%;
+            // background-color: #000;
+            //background-color: rgba(232, 236, 236, 0.3);
+            background-image: url("~/assets/images/xiangzuojiantou.png");
+            background-repeat: no-repeat;
+            background-size: 40px 40px;
+            opacity: 18%;
+            z-index: 2;
+        }
+    }
+
+    .next {
+        position: absolute;
+        background-color: rgba(60, 62, 62, 0.3);
+        right: 10px;
+        top: 220px;
+        width: 40px;
+        height: 60px;
+        border: none;
+        z-index: 1;
+        cursor: pointer;
+        &:hover {
+            background-color: rgba(60, 62, 62, 0.5);
+        }
+        
+        span {
+            position: absolute;
+            display: block;
+            right: 4px;
+            top: 7px;
+            width: 80%;
+            height: 80%;
+            // background-color: #000;
+            //background-color: rgba(232, 236, 236, 0.3);
+            background-image: url("~/assets/images/xiangyoujiantou.png");
+            background-repeat: no-repeat;
+            background-size: 40px 40px;
+            opacity: 18%;
+            z-index: 2;
+        }
+    }
+
+}
+

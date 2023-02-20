@@ -1,0 +1,8 @@
+@import "@/styles/variables.scss"; //导入全局变量
+.grid-view {
+    margin-right: -16px;
+
+    .view-item {
+        margin-right: 16px;
+    }
+}
